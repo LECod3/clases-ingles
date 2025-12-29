@@ -44,6 +44,9 @@ Si deseas clonar y correr este proyecto en tu máquina:
 
 ## Despliegue
 
+Puedes ver mi proyecto desplegado aquí:
+ **[https://clases-ingles-landing-page.netlify.app/](https://clases-ingles-landing-page.netlify.app/)**
+
 El proyecto está configurado para ser desplegado fácilmente en **Netlify** o **Vercel** arrastrando la carpeta `dist` generada por el comando:
 ```bash
 npm run build

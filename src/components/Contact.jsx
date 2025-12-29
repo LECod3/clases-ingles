@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function Contact() {
-  const [nombre, setNombre] = useState('');
-  const [email, setEmail] = useState('');
-  const [mensaje, setMensaje] = useState('');
-  // 1. Nuevo estado para controlar si el formulario fue enviado
+  const [nombre, setNombre] = useState("");
+  const [email, setEmail] = useState("");
+  const [mensaje, setMensaje] = useState("");
   const [enviado, setEnviado] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // 2. En lugar de alert, cambiamos el estado a true
     setEnviado(true);
   };
 
@@ -25,56 +23,65 @@ function Contact() {
 
         <div className="row justify-content-center">
           <div className="col-md-6">
-            {/* 3. Renderizado Condicional con Operador Ternario (Condición ? SiTrue : SiFalse) */}
             {enviado ? (
-              /* OPCIÓN A: Mensaje de Éxito */
-              <div className="alert alert-success text-center p-5 shadow-sm" role="alert">
-                <h4 className="alert-heading display-6">¡Gracias {nombre}! 🚀</h4>
+              <div
+                className="alert alert-success text-center p-5 shadow-sm"
+                role="alert"
+              >
+                <h4 className="alert-heading display-6">
+                  ¡Gracias {nombre}! 🚀
+                </h4>
                 <p className="mt-3">He recibido tu mensaje correctamente.</p>
                 <hr />
-                <p className="mb-0">Te escribiré a <strong>{email}</strong> muy pronto.</p>
-                <button 
-                  className="btn btn-outline-success mt-4" 
+                <p className="mb-0">
+                  Te escribiré a <strong>{email}</strong> muy pronto.
+                </p>
+                <button
+                  className="btn btn-outline-success mt-4"
                   onClick={() => {
                     setEnviado(false);
-                    setNombre('');
-                    setEmail('');
-                    setMensaje('');
+                    setNombre("");
+                    setEmail("");
+                    setMensaje("");
                   }}
                 >
                   Enviar otro mensaje
                 </button>
               </div>
             ) : (
-              /* OPCIÓN B: Formulario */
-              <form onSubmit={handleSubmit} className="bg-white p-4 rounded text-dark shadow-sm">
+              <form
+                onSubmit={handleSubmit}
+                className="bg-white p-4 rounded text-dark shadow-sm"
+              >
                 <div className="mb-3">
                   <label className="form-label">Tu Nombre</label>
-                  <input 
-                    type="text" 
-                    className="form-control" 
+                  <input
+                    type="text"
+                    className="form-control"
                     value={nombre}
                     onChange={(e) => setNombre(e.target.value)}
-                    required 
+                    required
                   />
                 </div>
-                
+
                 <div className="mb-3">
-                  <label className="form-label">Tu Email (para responderte)</label>
-                  <input 
-                    type="email" 
-                    className="form-control" 
+                  <label className="form-label">
+                    Tu Email (para responderte)
+                  </label>
+                  <input
+                    type="email"
+                    className="form-control"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    required 
+                    required
                   />
                 </div>
-                
+
                 <div className="mb-3">
                   <label className="form-label">Mensaje o Consulta</label>
-                  <textarea 
-                    className="form-control" 
-                    rows="3" 
+                  <textarea
+                    className="form-control"
+                    rows="3"
                     value={mensaje}
                     onChange={(e) => setMensaje(e.target.value)}
                   ></textarea>
@@ -87,7 +94,7 @@ function Contact() {
             )}
           </div>
         </div>
-        
+
         <div className="text-center mt-5 small text-white">
           &copy; 2025 Luciano Caro
         </div>

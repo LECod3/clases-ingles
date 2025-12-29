@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function Testimonials({ reviews }) {
   return (
@@ -11,8 +11,10 @@ function Testimonials({ reviews }) {
               <div className="card-body">
                 <p className="card-text fst-italic">"{review.text}"</p>
                 <div className="d-flex align-items-center mt-3">
-                  {/* Avatar circular con las iniciales (simulado) */}
-                  <div className="rounded-circle bg-primary text-white d-flex justify-content-center align-items-center me-3" style={{width: '40px', height: '40px'}}>
+                  <div
+                    className="rounded-circle bg-primary text-white d-flex justify-content-center align-items-center me-3"
+                    style={{ width: "40px", height: "40px" }}
+                  >
                     {review.name.charAt(0)}
                   </div>
                   <div>

@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -6,16 +7,22 @@ import Testimonials from "./components/Testimonials";
 
 function App() {
   return (
-    <>
+    <Router>
       <Header />
-      <Hero
-        title="Aprende Inglés de forma práctica y real"
-        subtitle="Clases personalizadas adaptadas a tus objetivos. Ya sea para trabajar, estudiar, viajar o simplemente mejorar."
-      />
-      <About items={learningPoints} />
-      <Testimonials reviews={studentReviews} />
-      <Contact />
-    </>
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Hero
+              title="Aprende Inglés de forma práctica y real"
+              subtitle="Clases personalizadas adaptadas a tus objetivos. Ya sea para trabajar, estudiar, viajar o simplemente mejorar."
+            />
+            <About items={learningPoints} />
+            <Testimonials reviews={studentReviews} />
+            <Contact />
+          </>
+        } />
+      </Routes>
+    </Router>
   );
 }
 

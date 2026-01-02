@@ -2,7 +2,7 @@ import React from "react";
 
 function Testimonials({ reviews }) {
   return (
-    <section className="container py-5 bg-light">
+    <section id="clases" className="container py-5 bg-light">
       <h2 className="text-center mb-5">Lo que dicen mis alumnos</h2>
       <div className="row">
         {reviews.map((review, index) => (

@@ -12,7 +12,7 @@ function Contact() {
   };
 
   return (
-    <footer className="bg-dark text-white py-5 mt-5">
+    <footer id="contact" className="bg-dark text-white py-5 mt-5">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-8 text-center mb-3">

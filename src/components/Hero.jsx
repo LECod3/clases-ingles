@@ -1,4 +1,5 @@
 import React from "react";
+import heroImage from "../assets/imgs/clases-ingles.png";
 
 function Hero({ title, subtitle }) {
   return (
@@ -6,10 +7,10 @@ function Hero({ title, subtitle }) {
       <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div className="col-10 col-sm-8 col-lg-6">
           <img
-            src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=2071&auto=format&fit=crop"
+            src={heroImage}
             className="d-block mx-lg-auto img-fluid rounded shadow"
             alt="Aprender Inglés"
-            width="700"
+            width="500"
             height="500"
             loading="lazy"
           />

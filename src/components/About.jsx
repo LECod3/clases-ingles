@@ -18,11 +18,10 @@ function About({ items }) {
           </ul>
         </div>
         <div className="col-md-6">
-          <div className="p-5 bg-light border rounded-3 text-center">
+          <div className="p-5 border border-secondary rounded-3 text-center">
             <h3>¿Por qué elegirme?</h3>
             <p className="mt-3">
-              "Aprender un idioma es abrir una puerta a un nuevo mundo. Te
-              acompaño en cada paso."
+              "Aprender un idioma es descubrir un puente entre culturas."
             </p>
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"

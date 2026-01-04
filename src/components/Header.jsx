@@ -1,12 +1,13 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark navbar-custom">
       <div className="container">
-        <a className="navbar-brand" href="#">
-          Clases de Inglés. Trad. Luciano Caro
-        </a>
+        <Link className="navbar-brand" to="/">
+          Traductor Luciano Ezequiel Caro
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -21,22 +22,27 @@ function Header() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <NavLink className="nav-link" to="/" end>
                 Inicio
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/precios">
+                Precios
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/#about">
+                Metodologia
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#about">
-                Sobre Mí
+              <a className="nav-link" href="/#clases">
+                Reseñas
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#clases">
-                Clases
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#contact">
+              <a className="nav-link" href="/#contact">
                 Contacto
               </a>
             </li>
